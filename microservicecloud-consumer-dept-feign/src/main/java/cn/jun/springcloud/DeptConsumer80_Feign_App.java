@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages= {"cn.jun.springcloud"})
+@EnableFeignClients(basePackages= {"cn.jun.springcloud"})  //使用feign，如果出现服务器断掉的服务，请求多次没有反应之后，就不会再发送请求
 @ComponentScan("cn.jun.springcloud")
 public class DeptConsumer80_Feign_App {
 
